@@ -39,7 +39,7 @@ const Add = () => {
         e.preventDefault()
 
         try {
-            const response = await axios.post(`https://team-track-ems.onrender.com/api/salary/add`, salary, {
+            const response = await axios.post(`https://teamtrack-backend.vercel.app/api/salary/add`, salary, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem("token")}`
                 }

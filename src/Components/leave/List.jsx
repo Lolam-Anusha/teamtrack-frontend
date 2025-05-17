@@ -11,7 +11,7 @@ const List = () => {
 
     const fetchLeaves = async () => {
         try {
-            const response = await axios.get(`https://team-track-ems.onrender.com/api/leave/${id}/${user.role}`, {
+            const response = await axios.get(`https://teamtrack-backend.vercel.app/api/leave/${id}/${user.role}`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 }

@@ -26,7 +26,7 @@ const Setting = () => {
         } else{
             try{
                 const response = await axios.put(
-                    "https://team-track-ems.onrender.com/api/setting/change-password",
+                    "https://teamtrack-backend.vercel.app/api/setting/change-password",
                     setting,
                     {
                         headers: {

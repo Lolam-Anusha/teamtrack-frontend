@@ -41,7 +41,7 @@ export const columns = [
 export const fetchDepartments = async () => {
     let departments
     try {
-        const response = await axios.get("https://team-track-ems.onrender.com/api/department", {
+        const response = await axios.get("https://teamtrack-backend.vercel.app/api/department", {
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("token")}`
             }
@@ -61,7 +61,7 @@ export const fetchDepartments = async () => {
 export const getEmployees = async (id) => {
     let employees
     try {
-        const response = await axios.get(`https://team-track-ems.onrender.com/employee/department/${id}`, {
+        const response = await axios.get(`https://teamtrack-backend.vercel.app/employee/department/${id}`, {
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("token")}`
             }

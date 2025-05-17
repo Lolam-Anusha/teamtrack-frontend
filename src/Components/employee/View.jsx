@@ -9,7 +9,7 @@ const View = () => {
     useEffect(() => {
         const fetchEmployee = async () => {
             try {
-                const response = await axios.get(`https://team-track-ems.onrender.com/api/employee/${id}`, {
+                const response = await axios.get(`https://teamtrack-backend.vercel.app/api/employee/${id}`, {
                     headers: {
                         "Authorization": `Bearer ${localStorage.getItem("token")}`
                     }
@@ -35,7 +35,7 @@ const View = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <img 
-                       src={`https://team-track-ems.onrender.com/${employee.userId.profileImage}`}
+                       src={`https://teamtrack-backend.vercel.app/${employee.userId.profileImage}`}
                        className="rounded-full border w-72"
                     />
                 </div>

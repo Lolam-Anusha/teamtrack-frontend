@@ -12,7 +12,7 @@ const View = () => {
 
     const fetchSalaries = async () => {
         try{
-            const response = await axios.get(`https://team-track-ems.onrender.com/api/salary/${id}/${user.role}`, {
+            const response = await axios.get(`https://teamtrack-backend.vercel.app/api/salary/${id}/${user.role}`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 }

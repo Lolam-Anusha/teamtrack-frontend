@@ -14,7 +14,7 @@ const List = () => {
         const fetchEmployees = async () => {
             setEmpLoading(true)
             try {
-                const response = await axios.get("https://team-track-ems.onrender.com/api/employee", {
+                const response = await axios.get("https://teamtrack-backend.vercel.app/api/employee", {
                     headers: {
                         "Authorization": `Bearer ${localStorage.getItem("token")}`
                     }
@@ -28,7 +28,7 @@ const List = () => {
                             dep_name: emp.department.dep_name,
                             name: emp.userId.name,
                             dob: new Date(emp.dob).toLocaleDateString(),
-                            profileImage: <img width={50} height={50} className="rounded-full" src={`https://team-track-ems.onrender.com/${emp.userId.profileImage}`} />,
+                            profileImage: <img width={50} height={50} className="rounded-full" src={`https://teamtrack-backend.vercel.app/${emp.userId.profileImage}`} />,
                             action: (<EmployeeButtons Id={emp._id}/>)
                         }
                     ))

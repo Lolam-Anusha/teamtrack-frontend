@@ -15,7 +15,7 @@ const Login = () =>{
     const handleSubmit = async (e) =>{
         e.preventDefault()
         try{
-            const response = await axios.post("https://team-track-ems.onrender.com/api/auth/login", { email, password})
+            const response = await axios.post("https://teamtrack-backend.vercel.app/api/auth/login", { email, password})
             if(response.data.success){
                 // alert("Successfully login")
                 login(response.data.user)
